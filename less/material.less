@@ -1,129 +1,63 @@
-@import (reference) "../bower_components/bootstrap/less/variables.less";
-@import (reference) "../bower_components/bootstrap/less/mixins.less";
+@import "../bower_components/bootstrap/less/bootstrap";
 
-@import "_variables.less";
-@import "_mixins.less";
-@import "_icons-material-design.less";
-@import "_shadows.less";
+@import "variables";
+@import "mixins";
+@import "icons-material-design";
+@import "shadows";
 
-body {
-  background-color: #EEEEEE;
-  &.inverse {
-    background: #333333;
-    &, .form-control {
-      color: @darkbg-text;
-    }
-  }
-}
-
-
-body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
-  font-family: "RobotoDraft", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-}
-
-h5, h6{
-  font-weight: 400;
-}
-
-a, a:hover, a:focus {
-  color: @brand-primary;
-}
+@import "type";
+@import "scaffolding";
 
 // Well and Jumbotrons
-@import "_welljumbo.less";
+@import "welljumbo";
 
 // Buttons
-@import "_buttons.less";
+@import "buttons";
 
 // Checkboxes
-@import "_checkboxes.less";
+@import "checkboxes";
 
 // Toggle buttons
-@import "_togglebutton.less";
+@import "togglebutton";
 
 // Radios
-@import "_radios.less";
+@import "radios";
 
 // Text inputs
-@import "_inputs.less";
+@import "inputs";
 
-legend {
-  border-bottom: 0;
-}
+@import "forms";
 
 // Lists
-@import "_lists.less";
+@import "lists";
 
 // Navbar
-@import "_navbar.less";
+@import "navbar";
 
-.dropdown-menu {
-  border: 0;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  .divider {
-    background-color: rgba(229, 229, 229, 0.12);
-  }
-  li {
-    overflow: hidden;
-    position: relative;
-    a:hover {
-      background-color: transparent;
-      color: @brand-primary;
-    }
-  }
-  .variations(~" li a:hover", color, @brand-primary);
-}
+@import "dropdowns";
 
 // Alerts
-@import "_alerts.less";
+@import "alerts";
 
 // Progress bar
-@import "_progress.less";
+@import "progress";
 
-// Typography
-.text-warning {
-  color: @btn-warning;
-}
-.text-primary {
-  color: @btn-primary;
-}
-.text-danger {
-  color: @btn-danger;
-}
-.text-success {
-  color: @btn-success;
-}
-.text-info {
-  color: @btn-info;
-}
+@import "tabs";
 
-@import "_tabs.less";
+@import "popups";
 
-@import "_popups.less";
+@import "icons";
 
-@import "_icons.less";
+@import "cards";
 
-@import "_cards.less";
+@import "dialogs";
 
-@import "_dialogs.less";
+@import "labels";
 
-@import "_labels.less";
-
-@import "_panels.less";
-
-// Prevent highlight on mobile
-* {
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  -webkit-tap-highlight-color: transparent;
-  &:focus {
-    outline: 0;
-  }
-}
-
+@import "panels";
 
 // External plugins
-@import "_plugin-snackbarjs.less";
-@import "_plugin-nouislider.less";
-@import "_plugin-selectize.less";
-@import "_plugin-dropdownjs.less";
+@import "plugin-snackbarjs";
+@import "plugin-nouislider";
+@import "plugin-selectize";
+@import "plugin-dropdownjs";
