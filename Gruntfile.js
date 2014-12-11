@@ -239,7 +239,6 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask("ripples", [
-    "bower-install",
     "ripples:less",
     "ripples:js"
   ]);
