@@ -10,16 +10,17 @@
     position: relative;
     border: none;
     text-transform: uppercase;
+    .shadow-z(0);
 
-    &:hover:not(.btn-link):not(.btn-flat) {
-        .shadow-z-2-hover();
-    }
-    &:active:not(.btn-link):not(.btn-flat) {
-        .shadow-z-3();
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+        .shadow-z(2);
     }
 
     transition:
-      box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1),
       background-color 0.28s cubic-bezier(0.4, 0, 0.2, 1),
       color 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -28,11 +29,23 @@
 
 .btn-flat {
   background: none;
-  box-shadow: none;
   font-weight: 500;
 
   &:disabled {
     color: @text-disabled !important;
+  }
+}
+
+.btn-flat,
+.btn-link {
+  .shadow-z(0);
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    .shadow-z(0);
   }
 }
 
@@ -43,7 +56,7 @@
   width: 56px;
   height: 56px;
   &, &:hover {
-    .shadow-z-1();
+    .shadow-z(1);
   }
   &, .ripple-wrapper {
     border-radius: 100%;
@@ -61,7 +74,14 @@
 }
 
 .btn-raised {
-  .btn-shadow();
+  .shadow-z(2);
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    .shadow-z(4);
+  }
 }
 
 .btn-material-red {
@@ -146,26 +166,70 @@
     position: relative;
     border-radius: 2px;
     margin: 10px 1px;
+    .shadow-z(0);
 
-    .btn-shadow();
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      .shadow-z(2);
+
+      .dropdown-menu {
+        .shadow-z(2);
+      }
+    }
+
     &.open .dropdown-toggle {
         box-shadow: none;
     }
+
     &.btn-group-raised {
-        .btn-shadow();
+      .shadow-z(2);
+
+      .dropdown-menu {
+        .shadow-z(2);
+      }
+
+      &:hover,
+      &:focus,
+      &.focus,
+      &:active,
+      &.active {
+        .shadow-z(4);
+
+        .dropdown-menu {
+          .shadow-z(4);
+        }
+      }
     }
-    .btn, .btn:active, .btn-group {
+
+    .btn {
+      &, &:active, &-group {
         box-shadow: none !important;
         margin: 0;
+      }
     }
-}
-.btn-group-flat {
-    box-shadow: none !important;
 }
 
-.btn-shadow() {
-    .shadow-z-2();
-    &:active:not(.btn-link) {
-        .shadow-z-3();
-    }
+.btn-group {
+  .btn + .btn,
+  .btn + .btn-group,
+  .btn-group + .btn,
+  .btn-group + .btn-group {
+    margin: 0;
+  }
+}
+
+.btn-group-vertical {
+  > .btn + .btn,
+  > .btn + .btn-group,
+  > .btn-group + .btn,
+  > .btn-group + .btn-group {
+    margin: 0;
+  }
+}
+
+.btn-group-flat {
+    box-shadow: none !important;
 }
