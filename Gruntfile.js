@@ -4,7 +4,16 @@ module.exports = function(grunt) {
   require("load-grunt-tasks")(grunt);
 
   grunt.initConfig({
-
+    "bower-install-simple": {
+      "dev": {
+        options: {
+          color: true,
+          forceLatest: true,
+          production: false,
+          update: true
+        }
+      }
+    },
 
     // Compile less to .css
     // Compile less to .min.css
@@ -19,7 +28,7 @@ module.exports = function(grunt) {
           sourceMapURL: "material.css.map"
         },
         files: {
-          "dist/css/material.css": "less/material.less",
+          "dist/css/material.css": "less/material.less"
         }
       },
       materialwfont: {
@@ -32,7 +41,7 @@ module.exports = function(grunt) {
           outputSourceFiles: true
         },
         files: {
-          "dist/css/material-wfont.css": "less/material-wfont.less",
+          "dist/css/material-wfont.css": "less/material-wfont.less"
         }
       },
       ripples: {
@@ -45,7 +54,7 @@ module.exports = function(grunt) {
           outputSourceFiles: true
         },
         files: {
-          "dist/css/ripples.css": "less/ripples.less",
+          "dist/css/ripples.css": "less/ripples.less"
         }
       }
     },
@@ -209,11 +218,14 @@ module.exports = function(grunt) {
 
   grunt.registerTask("default", ["material", "ripples"]);
 
+  grunt.registerTask("bower-install", [ "bower-install-simple:dev" ]);
+
   grunt.registerTask("material", [
     "material:less",
     "material:js"
   ]);
   grunt.registerTask("material:less", [
+    "bower-install",
     "less:material",
     "less:materialwfont",
     "csswring:material",
@@ -227,6 +239,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask("ripples", [
+    "bower-install",
     "ripples:less",
     "ripples:js"
   ]);
