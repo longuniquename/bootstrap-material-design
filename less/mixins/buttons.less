@@ -25,7 +25,7 @@
   }
 }
 
-.button-material-variant(@color) when (lightness(@color) >= 75%) {
+.button-material-variant(@color) when (luma(@color) >= 60%) {
   color: fadeout(black, 16%);
 
   &:hover,
@@ -38,7 +38,7 @@
   }
 }
 
-.button-material-variant(@color) when (lightness(@color) < 75%) {
+.button-material-variant(@color) when (luma(@color) < 60%) {
   color: fadeout(white, 16%);
 
   &:hover,
