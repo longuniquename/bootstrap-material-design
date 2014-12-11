@@ -4,8 +4,8 @@
     <head>
         <meta charset="utf-8">
         <title>Bootstrap Material</title>
-        <link href="dist/css/ripples.min.css" rel="stylesheet">
-        <link href="dist/css/material-wfont.min.css" rel="stylesheet">
+        <link href="dist/css/ripples.css" rel="stylesheet">
+        <link href="dist/css/material-wfont.css" rel="stylesheet">
         <link href="//fezvrasta.github.io/snackbarjs/dist/snackbar.min.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
@@ -39,6 +39,10 @@
             .icon-preview:hover i { color: #4285f4; }
             .icon-preview:hover span { display: block; cursor: text; }
 
+            .bs-component>.btn, .bs-component>.btn-group {
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
         </style>
     </head>
     <body>
@@ -255,6 +259,29 @@
                             <a href="javascript:void(0)" class="btn btn-danger">Danger</a>
                             <a href="javascript:void(0)" class="btn btn-link">Link</a>
                         </p>
+
+                        <h4>Material buttons</h4>
+                        <p class="bs-component">
+                            <a href="javascript:void(0)" class="btn btn-material-red">Red</a>
+                            <a href="javascript:void(0)" class="btn btn-material-pink">Pink</a>
+                            <a href="javascript:void(0)" class="btn btn-material-purple">Purple</a>
+                            <a href="javascript:void(0)" class="btn btn-material-deeppurple">Deeppurple</a>
+                            <a href="javascript:void(0)" class="btn btn-material-indigo">Indigo</a>
+                            <a href="javascript:void(0)" class="btn btn-material-blue">Blue</a>
+                            <a href="javascript:void(0)" class="btn btn-material-lightblue">Lightblue</a>
+                            <a href="javascript:void(0)" class="btn btn-material-cyan">Cyan</a>
+                            <a href="javascript:void(0)" class="btn btn-material-teal">Teal</a>
+                            <a href="javascript:void(0)" class="btn btn-material-lightgreen">Lightgreen</a>
+                            <a href="javascript:void(0)" class="btn btn-material-lime">Lime</a>
+                            <a href="javascript:void(0)" class="btn btn-material-lightyellow">Lightyellow</a>
+                            <a href="javascript:void(0)" class="btn btn-material-orange">Orange</a>
+                            <a href="javascript:void(0)" class="btn btn-material-deeporange">Deeporange</a>
+                            <a href="javascript:void(0)" class="btn btn-material-grey">Grey</a>
+                            <a href="javascript:void(0)" class="btn btn-material-bluegrey">Bluegrey</a>
+                            <a href="javascript:void(0)" class="btn btn-material-brown">Brown</a>
+                            <a href="javascript:void(0)" class="btn btn-material-lightgrey">Lightgrey</a>
+                        </p>
+
                         <h3>Flat buttons</h3>
                         <p class="bs-component">
                             <a href="javascript:void(0)" class="btn btn-flat btn-default">Default</a>
@@ -264,6 +291,28 @@
                             <a href="javascript:void(0)" class="btn btn-flat btn-warning">Warning</a>
                             <a href="javascript:void(0)" class="btn btn-flat btn-danger">Danger</a>
                             <a href="javascript:void(0)" class="btn btn-flat btn-link">Link</a>
+                        </p>
+
+                        <h4>Material buttons</h4>
+                        <p class="bs-component">
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-red">Red</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-pink">Pink</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-purple">Purple</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-deeppurple">Deeppurple</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-indigo">Indigo</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-blue">Blue</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-lightblue">Lightblue</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-cyan">Cyan</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-teal">Teal</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-lightgreen">Lightgreen</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-lime">Lime</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-lightyellow">Lightyellow</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-orange">Orange</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-deeporange">Deeporange</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-grey">Grey</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-bluegrey">Bluegrey</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-brown">Brown</a>
+                            <a href="javascript:void(0)" class="btn btn-flat btn-material-lightgrey">Lightgrey</a>
                         </p>
 
                         <h3>Raised buttons</h3>
@@ -374,13 +423,34 @@
 
                         <h3>Floating action buttons</h3>
                         <p class="bs-component">
-                            <a href="javascript:void(0)" class="btn btn-default btn-fab btn-raised mdi-action-grade"></a>
-                            <a href="javascript:void(0)" class="btn btn-primary btn-fab btn-raised mdi-action-grade"></a>
-                            <a href="javascript:void(0)" class="btn btn-success btn-fab btn-raised mdi-action-grade"></a>
-                            <a href="javascript:void(0)" class="btn btn-info btn-fab btn-raised mdi-action-grade"></a>
-                            <a href="javascript:void(0)" class="btn btn-warning btn-fab btn-raised mdi-action-grade"></a>
-                            <a href="javascript:void(0)" class="btn btn-danger btn-fab btn-raised mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-default btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-primary btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-success btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-info btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-warning btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-danger btn-fab mdi-action-grade"></a>
+                        </p>
 
+                        <h4>Material buttons</h4>
+                        <p class="bs-component">
+                            <a href="javascript:void(0)" class="btn btn-material-red btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-pink btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-purple btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-deeppurple btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-indigo btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-blue btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-lightblue btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-cyan btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-teal btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-lightgreen btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-lime btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-lightyellow btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-orange btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-deeporange btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-grey btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-bluegrey btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-brown btn-fab mdi-action-grade"></a>
+                            <a href="javascript:void(0)" class="btn btn-material-lightgrey btn-fab mdi-action-grade"></a>
                         </p>
 
                     </div>

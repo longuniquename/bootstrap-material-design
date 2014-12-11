@@ -1,62 +1,43 @@
+// Bootstrap
 @import "../bower_components/bootstrap/less/bootstrap";
 
+// Bootstrap mixins overrides
+@import "mixins/buttons";
+
+// Core variables and mixins
 @import "variables";
 @import "mixins";
+
+// Reset and dependencies
 @import "icons-material-design";
+
+// Core CSS
+@import "scaffolding";
+@import "type";
+@import "forms";
+@import "buttons";
 @import "shadows";
 
-@import "type";
-@import "scaffolding";
-
-// Well and Jumbotrons
-@import "welljumbo";
-
-// Buttons
-@import "buttons";
-
-// Checkboxes
-@import "checkboxes";
-
-// Toggle buttons
-@import "togglebutton";
-
-// Radios
-@import "radios";
-
-// Text inputs
-@import "inputs";
-
-@import "forms";
-
-// Lists
-@import "lists";
-
-// Navbar
-@import "navbar";
-
+// Components
 @import "dropdowns";
-
-// Alerts
 @import "alerts";
-
-// Progress bar
-@import "progress";
-
+@import "progress-bars";
+@import "welljumbo";
+@import "togglebutton";
+@import "checkboxes";
+@import "radios";
+@import "inputs";
+@import "lists";
+@import "navbar";
 @import "tabs";
-
 @import "popups";
-
 @import "icons";
-
 @import "cards";
-
 @import "dialogs";
-
 @import "labels";
-
 @import "panels";
 
-// External plugins
+// Plugins
 @import "plugin-snackbarjs";
 @import "plugin-nouislider";
 @import "plugin-selectize";
