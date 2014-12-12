@@ -12771,6 +12771,12 @@ select.form-control.focus {
   border-bottom-right-radius: 2px;
   border-top-right-radius: 2px;
 }
+.navbar-static-top.navbar .navbar-toolbar > .btn-group:last-child .btn:last-child,
+.navbar-fixed-top.navbar .navbar-toolbar > .btn-group:last-child .btn:last-child,
+.navbar-fixed-bottom.navbar .navbar-toolbar > .btn-group:last-child .btn:last-child {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
 @media (max-width: 767px) {
   .navbar > .container .navbar-header,
   .navbar > .container-fluid .navbar-header {
